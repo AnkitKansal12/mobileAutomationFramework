@@ -1,0 +1,48 @@
+24-02-2020 15:06:38 INFO [LoggersUtil]: Emulator has started
+24-02-2020 15:06:38 INFO [LoggersUtil]: Appium Settings has been uninstalled succesfully
+24-02-2020 15:07:34 INFO [LoggersUtil]: Appium Server has been started
+24-02-2020 15:07:34 INFO [LoggersUtil]: ****************************************************************************************
+24-02-2020 15:07:34 INFO [LoggersUtil]: ****************************************************************************************
+24-02-2020 15:07:34 INFO [LoggersUtil]: $$$$$$$$$$$$$$$$$$$$$                 OneAdult_OneChild_OneWay_Currency_AUD_FareType_Light_Cabin_QueueJump_Seat_Upfront_FOP_Visa       $$$$$$$$$$$$$$$$$$$$$$$$$
+24-02-2020 15:07:34 INFO [LoggersUtil]: ****************************************************************************************
+24-02-2020 15:07:34 INFO [LoggersUtil]: ****************************************************************************************
+24-02-2020 15:07:38 INFO [LoggersUtil]: Inner Text is:Tigertainment
+24-02-2020 15:07:38 INFO [LoggersUtil]: Getting Text: Tigertainment
+24-02-2020 15:07:38 INFO [LoggersUtil]: User has been landed on the HomePage Successfully
+24-02-2020 15:07:39 INFO [LoggersUtil]: Book Flight text is getting displayed on the homepage
+24-02-2020 15:07:40 INFO [LoggersUtil]: User has clicked on the Book Flight button
+24-02-2020 15:07:43 INFO [LoggersUtil]: User has clicked on the Currency text AUD
+24-02-2020 15:07:45 INFO [LoggersUtil]: User has Selected the Currency :AUD
+24-02-2020 15:07:45 INFO [LoggersUtil]: User has clicked on the Return Button
+24-02-2020 15:07:46 INFO [LoggersUtil]: User has clicked on the textOne Way
+24-02-2020 15:07:50 INFO [LoggersUtil]: User has clicked on the Origin
+24-02-2020 15:07:54 INFO [LoggersUtil]: User has selected the From Where as :Brisbane
+24-02-2020 15:07:55 INFO [LoggersUtil]: User has selected the To Where as :Melbourne
+24-02-2020 15:07:55 INFO [LoggersUtil]: User has selected the Date
+24-02-2020 15:07:58 INFO [LoggersUtil]: User has selected the Date as :27
+24-02-2020 15:08:01 INFO [LoggersUtil]: User has clicked on Continue Button
+24-02-2020 15:08:03 INFO [LoggersUtil]: User has clicked on search flights button
+24-02-2020 15:08:08 INFO [LoggersUtil]: User has selected the first Slot
+24-02-2020 15:08:10 INFO [LoggersUtil]: User has selected the express fare as :LIGHT
+24-02-2020 15:08:39 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //*[@text='Next Passenger'] | //*[@text='Continue']
+24-02-2020 15:08:39 ERROR[LoggersUtil]: By.xpath: //*[@text='Next Passenger'] | //*[@text='Continue']locator is not displayed on screen.
+24-02-2020 15:08:41 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //*[@text='Next Passenger'] | //*[@text='Continue']
+24-02-2020 15:08:41 ERROR[LoggersUtil]: By.xpath: //*[@text='Next Passenger'] | //*[@text='Continue']locator is not displayed on screen.
+24-02-2020 15:08:44 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //*[@text='Next Passenger'] | //*[@text='Continue']
+24-02-2020 15:08:44 ERROR[LoggersUtil]: By.xpath: //*[@text='Next Passenger'] | //*[@text='Continue']locator is not displayed on screen.
+24-02-2020 15:08:52 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //*[@resource-id='au.com.tigerair.booking:id/sliding_tab_layout']//*[contains(@text,'Adult')]
+24-02-2020 15:08:52 ERROR[LoggersUtil]: By.xpath: //*[@resource-id='au.com.tigerair.booking:id/sliding_tab_layout']//*[contains(@text,'Adult')]locator is not displayed on screen.
+24-02-2020 15:09:06 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //*[@text='Continue']
+24-02-2020 15:09:06 ERROR[LoggersUtil]: By.xpath: //*[@text='Continue']locator is not displayed on screen.
+24-02-2020 15:09:09 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //*[@text='Next Passenger'] | //*[@text='Continue']
+24-02-2020 15:09:09 ERROR[LoggersUtil]: By.xpath: //*[@text='Next Passenger'] | //*[@text='Continue']locator is not displayed on screen.
+24-02-2020 15:09:12 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //*[@text='Next Passenger'] | //*[@text='Continue']
+24-02-2020 15:09:12 ERROR[LoggersUtil]: By.xpath: //*[@text='Next Passenger'] | //*[@text='Continue']locator is not displayed on screen.
+24-02-2020 15:09:15 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //*[@text='Next Passenger'] | //*[@text='Continue']
+24-02-2020 15:09:15 ERROR[LoggersUtil]: By.xpath: //*[@text='Next Passenger'] | //*[@text='Continue']locator is not displayed on screen.
+24-02-2020 15:09:20 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //*[@text='Next Passenger']
+24-02-2020 15:09:20 ERROR[LoggersUtil]: By.xpath: //*[@text='Next Passenger']locator is not displayed on screen.
+24-02-2020 15:10:34 INFO [LoggersUtil]: Inner Text is:E751FM
+24-02-2020 15:10:34 INFO [LoggersUtil]: Appium Server has been ended
+24-02-2020 15:10:34 INFO [LoggersUtil]: Emulator has been ended
+24-02-2020 15:10:34 INFO [LoggersUtil]: User doesn't want to send email reports

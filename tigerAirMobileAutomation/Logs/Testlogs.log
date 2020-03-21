@@ -1,0 +1,24 @@
+21-03-2020 19:39:43 INFO [LoggersUtil]: Emulator has started
+21-03-2020 19:39:43 INFO [LoggersUtil]: Appium Settings has been uninstalled succesfully
+21-03-2020 19:40:05 INFO [LoggersUtil]: Appium Server has been started
+21-03-2020 19:40:05 INFO [LoggersUtil]: ****************************************************************************************
+21-03-2020 19:40:05 INFO [LoggersUtil]: ****************************************************************************************
+21-03-2020 19:40:05 INFO [LoggersUtil]: $$$$$$$$$$$$$$$$$$$$$                 OneAdult_8Child_OneWay_Currency_NZD_FareType_Light_Cabin_Baggage_30kg_QueueJump_OneSportsEquipment_FOP_MASTER_DC       $$$$$$$$$$$$$$$$$$$$$$$$$
+21-03-2020 19:40:05 INFO [LoggersUtil]: ****************************************************************************************
+21-03-2020 19:40:05 INFO [LoggersUtil]: ****************************************************************************************
+21-03-2020 19:40:07 INFO [LoggersUtil]: Inner Text is:Tigertainment
+21-03-2020 19:40:07 INFO [LoggersUtil]: Getting Text: Tigertainment
+21-03-2020 19:40:07 INFO [LoggersUtil]: User has been landed on the HomePage Successfully
+21-03-2020 19:40:08 INFO [LoggersUtil]: Book Flight text is getting displayed on the homepage
+21-03-2020 19:40:09 INFO [LoggersUtil]: User has clicked on the Book Flight button
+21-03-2020 19:40:32 INFO [LoggersUtil]: User has clicked on the Currency text AUD
+21-03-2020 19:40:34 INFO [LoggersUtil]: User has Selected the Currency :AUD
+21-03-2020 19:40:34 INFO [LoggersUtil]: User has clicked on the Return Button
+21-03-2020 19:40:35 INFO [LoggersUtil]: User has clicked on the textReturn
+21-03-2020 19:40:38 INFO [LoggersUtil]: User has clicked on the Origin
+21-03-2020 19:40:44 INFO [LoggersUtil]: User has selected the From Where as :Sydney
+21-03-2020 19:40:45 INFO [LoggersUtil]: User has selected the To Where as :Melbourne
+21-03-2020 19:40:45 INFO [LoggersUtil]: User has selected the Date
+21-03-2020 19:40:49 INFO [LoggersUtil]: User has selected the Date as :20
+21-03-2020 19:40:50 INFO [LoggersUtil]: User has clicked on Continue Button
+21-03-2020 19:40:51 INFO [LoggersUtil]: User has clicked on search flights button

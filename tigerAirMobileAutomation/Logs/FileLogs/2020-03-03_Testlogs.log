@@ -1,0 +1,17 @@
+03-03-2020 11:58:04 INFO [LoggersUtil]: Emulator has started
+03-03-2020 11:58:04 INFO [LoggersUtil]: Appium Settings has been uninstalled succesfully
+03-03-2020 11:58:24 INFO [LoggersUtil]: Appium Server has been started
+03-03-2020 11:58:24 INFO [LoggersUtil]: ****************************************************************************************
+03-03-2020 11:58:24 INFO [LoggersUtil]: ****************************************************************************************
+03-03-2020 11:58:24 INFO [LoggersUtil]: $$$$$$$$$$$$$$$$$$$$$                 OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_Visa       $$$$$$$$$$$$$$$$$$$$$$$$$
+03-03-2020 11:58:24 INFO [LoggersUtil]: ****************************************************************************************
+03-03-2020 11:58:24 INFO [LoggersUtil]: ****************************************************************************************
+03-03-2020 11:58:26 INFO [LoggersUtil]: Inner Text is:Tigertainment
+03-03-2020 11:58:26 INFO [LoggersUtil]: Getting Text: Tigertainment
+03-03-2020 11:58:26 INFO [LoggersUtil]: User has been landed on the HomePage Successfully
+03-03-2020 11:58:27 INFO [LoggersUtil]: Book Flight text is getting displayed on the homepage
+03-03-2020 11:58:27 INFO [LoggersUtil]: User has clicked on the Book Flight button
+03-03-2020 11:58:29 INFO [LoggersUtil]: User has clicked on the Currency text AUD
+03-03-2020 11:58:31 INFO [LoggersUtil]: User has Selected the Currency :AUD
+03-03-2020 11:58:31 INFO [LoggersUtil]: User has clicked on the Return Button
+03-03-2020 11:58:32 INFO [LoggersUtil]: User has clicked on the textOne Way

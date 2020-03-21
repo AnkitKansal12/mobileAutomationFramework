@@ -1,0 +1,38 @@
+26-02-2020 12:35:45 INFO [LoggersUtil]: Emulator has started
+26-02-2020 12:35:45 INFO [LoggersUtil]: Appium Settings has been uninstalled succesfully
+26-02-2020 12:36:03 INFO [LoggersUtil]: Appium Server has been started
+26-02-2020 12:36:03 INFO [LoggersUtil]: ****************************************************************************************
+26-02-2020 12:36:03 INFO [LoggersUtil]: ****************************************************************************************
+26-02-2020 12:36:03 INFO [LoggersUtil]: $$$$$$$$$$$$$$$$$$$$$                 OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_Visa       $$$$$$$$$$$$$$$$$$$$$$$$$
+26-02-2020 12:36:03 INFO [LoggersUtil]: ****************************************************************************************
+26-02-2020 12:36:03 INFO [LoggersUtil]: ****************************************************************************************
+26-02-2020 12:36:06 INFO [LoggersUtil]: Inner Text is:Tigertainment
+26-02-2020 12:36:06 INFO [LoggersUtil]: Getting Text: Tigertainment
+26-02-2020 12:36:06 INFO [LoggersUtil]: User has been landed on the HomePage Successfully
+26-02-2020 12:36:06 INFO [LoggersUtil]: Book Flight text is getting displayed on the homepage
+26-02-2020 12:36:07 INFO [LoggersUtil]: User has clicked on the Book Flight button
+26-02-2020 12:36:08 INFO [LoggersUtil]: User has clicked on the Currency text AUD
+26-02-2020 12:36:10 INFO [LoggersUtil]: User has Selected the Currency :AUD
+26-02-2020 12:36:10 INFO [LoggersUtil]: User has clicked on the Return Button
+26-02-2020 12:36:11 INFO [LoggersUtil]: User has clicked on the textOne Way
+26-02-2020 12:36:13 INFO [LoggersUtil]: User has clicked on the Origin
+26-02-2020 12:36:15 INFO [LoggersUtil]: User has selected the From Where as :Brisbane
+26-02-2020 12:36:16 INFO [LoggersUtil]: User has selected the To Where as :Melbourne
+26-02-2020 12:36:16 INFO [LoggersUtil]: User has selected the Date
+26-02-2020 12:36:18 INFO [LoggersUtil]: User has selected the Date as :27
+26-02-2020 12:36:19 INFO [LoggersUtil]: User has clicked on Continue Button
+26-02-2020 12:36:20 INFO [LoggersUtil]: User has clicked on search flights button
+26-02-2020 12:36:27 INFO [LoggersUtil]: User has selected the first Slot
+26-02-2020 12:36:28 INFO [LoggersUtil]: User has selected the express fare as :LIGHT
+26-02-2020 12:36:50 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //android.widget.LinearLayout[2]/android.widget.FrameLayout[1]//android.widget.TextView[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch']
+26-02-2020 12:36:50 ERROR[LoggersUtil]: By.xpath: //android.widget.LinearLayout[2]/android.widget.FrameLayout[1]//android.widget.TextView[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch']locator is not displayed on screen.
+26-02-2020 12:36:53 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //android.widget.LinearLayout[2]/android.widget.FrameLayout[1]//android.widget.TextView[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch']
+26-02-2020 12:36:53 ERROR[LoggersUtil]: By.xpath: //android.widget.LinearLayout[2]/android.widget.FrameLayout[1]//android.widget.TextView[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch']locator is not displayed on screen.
+26-02-2020 12:36:56 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //android.widget.LinearLayout[2]/android.widget.FrameLayout[1]//android.widget.TextView[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch']
+26-02-2020 12:36:56 ERROR[LoggersUtil]: By.xpath: //android.widget.LinearLayout[2]/android.widget.FrameLayout[1]//android.widget.TextView[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch']locator is not displayed on screen.
+26-02-2020 12:37:12 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //*[@text='Next Passenger']
+26-02-2020 12:37:12 ERROR[LoggersUtil]: By.xpath: //*[@text='Next Passenger']locator is not displayed on screen.
+26-02-2020 12:38:17 INFO [LoggersUtil]: Inner Text is:
+26-02-2020 12:38:17 INFO [LoggersUtil]: Appium Server has been ended
+26-02-2020 12:38:17 INFO [LoggersUtil]: Emulator has been ended
+26-02-2020 12:38:17 INFO [LoggersUtil]: User doesn't want to send email reports

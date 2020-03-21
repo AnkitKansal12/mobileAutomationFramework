@@ -1,0 +1,45 @@
+02-03-2020 14:47:48 INFO [LoggersUtil]: Emulator has started
+02-03-2020 14:47:48 INFO [LoggersUtil]: Appium Settings has been uninstalled succesfully
+02-03-2020 14:48:01 INFO [LoggersUtil]: Appium Server has been started
+02-03-2020 14:48:01 INFO [LoggersUtil]: ****************************************************************************************
+02-03-2020 14:48:01 INFO [LoggersUtil]: ****************************************************************************************
+02-03-2020 14:48:01 INFO [LoggersUtil]: $$$$$$$$$$$$$$$$$$$$$                 OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_Visa       $$$$$$$$$$$$$$$$$$$$$$$$$
+02-03-2020 14:48:01 INFO [LoggersUtil]: ****************************************************************************************
+02-03-2020 14:48:01 INFO [LoggersUtil]: ****************************************************************************************
+02-03-2020 14:48:04 INFO [LoggersUtil]: Inner Text is:Tigertainment
+02-03-2020 14:48:04 INFO [LoggersUtil]: Getting Text: Tigertainment
+02-03-2020 14:48:04 INFO [LoggersUtil]: User has been landed on the HomePage Successfully
+02-03-2020 14:48:05 INFO [LoggersUtil]: Book Flight text is getting displayed on the homepage
+02-03-2020 14:48:05 INFO [LoggersUtil]: User has clicked on the Book Flight button
+02-03-2020 14:48:06 INFO [LoggersUtil]: User has clicked on the Currency text AUD
+02-03-2020 14:48:07 INFO [LoggersUtil]: User has Selected the Currency :AUD
+02-03-2020 14:48:08 INFO [LoggersUtil]: User has clicked on the Return Button
+02-03-2020 14:48:09 INFO [LoggersUtil]: User has clicked on the textOne Way
+02-03-2020 14:48:11 INFO [LoggersUtil]: User has clicked on the Origin
+02-03-2020 14:48:13 INFO [LoggersUtil]: User has selected the From Where as :Brisbane
+02-03-2020 14:48:14 INFO [LoggersUtil]: User has selected the To Where as :Melbourne
+02-03-2020 14:48:14 INFO [LoggersUtil]: User has selected the Date
+02-03-2020 14:48:16 INFO [LoggersUtil]: User has selected the Date as :28
+02-03-2020 14:48:17 INFO [LoggersUtil]: User has clicked on Continue Button
+02-03-2020 14:48:18 INFO [LoggersUtil]: User has clicked on search flights button
+02-03-2020 14:48:22 INFO [LoggersUtil]: User has selected the first Slot
+02-03-2020 14:48:23 INFO [LoggersUtil]: User has selected the express fare as :LIGHT
+02-03-2020 14:49:01 ERROR[LoggersUtil]: Some exception has occured during wait for an element for the visibilityExpected condition failed: waiting for visibility of element located by By.xpath: //*[@resource-id='au.com.tigerair.booking:id/qjump_items_block']//*[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch'] (tried for 20 second(s) with 500 milliseconds interval)
+02-03-2020 14:49:02 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //*[@resource-id='au.com.tigerair.booking:id/qjump_items_block']//*[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch']
+02-03-2020 14:49:02 ERROR[LoggersUtil]: By.xpath: //*[@resource-id='au.com.tigerair.booking:id/qjump_items_block']//*[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch']locator is not displayed on screen.
+02-03-2020 14:49:24 ERROR[LoggersUtil]: Some exception has occured during wait for an element for the visibilityExpected condition failed: waiting for visibility of element located by By.xpath: //*[@resource-id='au.com.tigerair.booking:id/qjump_items_block']//*[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch'] (tried for 20 second(s) with 500 milliseconds interval)
+02-03-2020 14:49:24 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //*[@resource-id='au.com.tigerair.booking:id/qjump_items_block']//*[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch']
+02-03-2020 14:49:24 ERROR[LoggersUtil]: By.xpath: //*[@resource-id='au.com.tigerair.booking:id/qjump_items_block']//*[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch']locator is not displayed on screen.
+02-03-2020 14:49:44 ERROR[LoggersUtil]: Some exception has occured during wait for an element for the visibilityExpected condition failed: waiting for visibility of element located by By.xpath: //*[@resource-id='au.com.tigerair.booking:id/qjump_items_block']//*[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch'] (tried for 20 second(s) with 500 milliseconds interval)
+02-03-2020 14:49:45 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //*[@resource-id='au.com.tigerair.booking:id/qjump_items_block']//*[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch']
+02-03-2020 14:49:45 ERROR[LoggersUtil]: By.xpath: //*[@resource-id='au.com.tigerair.booking:id/qjump_items_block']//*[@resource-id='au.com.tigerair.booking:id/queue_jump_element_switch']locator is not displayed on screen.
+02-03-2020 14:50:10 ERROR[LoggersUtil]: Some exception has occured during wait for an element for the visibilityExpected condition failed: waiting for visibility of element located by By.xpath: //android.widget.Button[@text='Next Passenger'] | //android.widget.Button[@text='Continue'] (tried for 20 second(s) with 500 milliseconds interval)
+02-03-2020 14:50:10 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //android.widget.Button[@text='Next Passenger'] | //android.widget.Button[@text='Continue']
+02-03-2020 14:50:10 ERROR[LoggersUtil]: By.xpath: //android.widget.Button[@text='Next Passenger'] | //android.widget.Button[@text='Continue']locator is not displayed on screen.
+02-03-2020 14:50:34 ERROR[LoggersUtil]: Some exception has occured during wait for an element for the visibilityExpected condition failed: waiting for visibility of element located by By.xpath: //android.widget.Button[@text='Next Passenger'] (tried for 20 second(s) with 500 milliseconds interval)
+02-03-2020 14:50:34 ERROR[LoggersUtil]: Some exception occurred while creating webelement By.xpath: //android.widget.Button[@text='Next Passenger']
+02-03-2020 14:50:34 ERROR[LoggersUtil]: By.xpath: //android.widget.Button[@text='Next Passenger']locator is not displayed on screen.
+02-03-2020 14:51:35 INFO [LoggersUtil]: Inner Text is:LB3KUD
+02-03-2020 14:51:35 INFO [LoggersUtil]: Appium Server has been ended
+02-03-2020 14:51:35 INFO [LoggersUtil]: Emulator has been ended
+02-03-2020 14:51:35 INFO [LoggersUtil]: User doesn't want to send email reports

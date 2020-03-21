@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="218579" started-at="2020-03-19T15:36:12 IST" finished-at="2020-03-19T15:39:51 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="218579" started-at="2020-03-19T15:36:12 IST" finished-at="2020-03-19T15:39:51 IST">
+      <class name="com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d]" name="startReport" is-config="true" duration-ms="13" started-at="2020-03-19T15:36:12 IST" finished-at="2020-03-19T15:36:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d]" name="setUP" is-config="true" duration-ms="13807" started-at="2020-03-19T15:36:12 IST" finished-at="2020-03-19T15:36:26 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
+        <test-method status="PASS" signature="OneAdult_OneChild_Return_Currency_AUD_FareType_Light_Cabin_QueueJump_FOP_VISA_DB()[pri:9, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d]" name="OneAdult_OneChild_Return_Currency_AUD_FareType_Light_Cabin_QueueJump_FOP_VISA_DB" duration-ms="204741" started-at="2020-03-19T15:36:26 IST" description="This Test Case is to validate OneWay Journey with One Adult and One Child" finished-at="2020-03-19T15:39:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OneAdult_OneChild_Return_Currency_AUD_FareType_Light_Cabin_QueueJump_FOP_VISA_DB -->
+        <test-method status="PASS" signature="reportTearDown(org.testng.ITestResult)[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d]" name="reportTearDown" is-config="true" duration-ms="1" started-at="2020-03-19T15:39:51 IST" finished-at="2020-03-19T15:39:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=OneAdult_OneChild_Return_Currency_AUD_FareType_Light_Cabin_QueueJump_FOP_VISA_DB status=SUCCESS method=BookingModuleTestCases.OneAdult_OneChild_Return_Currency_AUD_FareType_Light_Cabin_QueueJump_FOP_VISA_DB()[pri:9, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportTearDown -->
+        <test-method status="PASS" signature="stopService()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d]" name="stopService" is-config="true" duration-ms="6" started-at="2020-03-19T15:39:51 IST" finished-at="2020-03-19T15:39:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopService -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d]" name="tearDown" is-config="true" duration-ms="260" started-at="2020-03-19T15:39:51 IST" finished-at="2020-03-19T15:39:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
