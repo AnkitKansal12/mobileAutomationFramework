@@ -1,0 +1,25 @@
+30 Mar 2020 00:38:14 AM  INFO LoggersUtil:62 - Emulator has started
+30 Mar 2020 00:38:14 AM  INFO LoggersUtil:62 - Appium Settings has been uninstalled succesfully
+30 Mar 2020 00:38:14 AM  INFO LoggersUtil:62 - Mobile Capabilities has been set successfully
+30 Mar 2020 00:38:29 AM  INFO LoggersUtil:62 - Appium Server has been started
+30 Mar 2020 00:38:29 AM  INFO LoggersUtil:62 - Application has been launched Successfully
+30 Mar 2020 00:38:29 AM  INFO LoggersUtil:24 - ****************************************************************************************
+30 Mar 2020 00:38:29 AM  INFO LoggersUtil:26 - ****************************************************************************************
+30 Mar 2020 00:38:29 AM  INFO LoggersUtil:28 - $$$$$$$$$$$$$$$$$$$$$                 1Adult_OneWay_Currency(AUD)_FareType(Light)_FOP(VISA CC)       $$$$$$$$$$$$$$$$$$$$$$$$$
+30 Mar 2020 00:38:29 AM  INFO LoggersUtil:30 - ****************************************************************************************
+30 Mar 2020 00:38:29 AM  INFO LoggersUtil:32 - ****************************************************************************************
+30 Mar 2020 00:38:32 AM  INFO LoggersUtil:62 - Inner Text is:Book Flights
+30 Mar 2020 00:38:34 AM  INFO LoggersUtil:62 - User has clicked on the Currency text AUD
+30 Mar 2020 00:38:36 AM  INFO LoggersUtil:62 - User has Selected the Currency :AUD
+30 Mar 2020 00:38:36 AM  INFO LoggersUtil:62 - User has clicked on the Return Button
+30 Mar 2020 00:38:37 AM  INFO LoggersUtil:62 - User has clicked on the textOne Way
+30 Mar 2020 00:38:39 AM  INFO LoggersUtil:62 - User has clicked on the Origin
+30 Mar 2020 00:38:45 AM  INFO LoggersUtil:62 - User has selected the From Where as :Sydney
+30 Mar 2020 00:38:46 AM  INFO LoggersUtil:62 - User has selected the To Where as :Melbourne
+30 Mar 2020 00:38:46 AM  INFO LoggersUtil:62 - User has selected the Date
+30 Mar 2020 00:38:48 AM  INFO LoggersUtil:62 - User has selected the Date as :30
+30 Mar 2020 00:38:49 AM  INFO LoggersUtil:62 - User has clicked on Continue Button
+30 Mar 2020 00:38:50 AM  INFO LoggersUtil:62 - User has clicked on search flights button
+30 Mar 2020 00:38:51 AM  INFO LoggersUtil:62 - Appium Server has been ended
+30 Mar 2020 00:38:51 AM  INFO LoggersUtil:62 - Emulator has been ended
+30 Mar 2020 00:38:51 AM  INFO LoggersUtil:62 - User doesn't want to send email reports

@@ -1,0 +1,21 @@
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - Emulator has started
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - Appium Settings has been uninstalled succesfully
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - Mobile Capabilities has been set successfully
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - Appium Server has been started
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - Application has been launched Successfully
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - ****************************************************************************************
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - ****************************************************************************************
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - $$$$$$$$$$$$$$$$$$$$$                 1Adult_OneWay_Currency(AUD)_FareType(Light)_FOP(VISA CC)       $$$$$$$$$$$$$$$$$$$$$$$$$
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - ****************************************************************************************
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - ****************************************************************************************
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - User has clicked on the Currency text AUD
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - User has Selected the Currency :AUD
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - User has clicked on the Return Button
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - User has clicked on the textOne Way
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - User has clicked on the Origin
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - User has selected the From Where as :Sydney
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - User has selected the To Where as :Melbourne
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - User has selected the Date
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - User has selected the Date as :30
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - User has clicked on Continue Button
+[main] INFO  com.tigerAir.mobileAutomation.utils.LoggersUtil  - User has clicked on search flights button
