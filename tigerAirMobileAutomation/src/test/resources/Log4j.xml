@@ -8,32 +8,30 @@
 			<!-- For Printing message with date , time & class name also 7 <param 
 				name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss} %5p %c{1} - %m%n"/> -->
 			<!-- For printing message only -->
-			<param name="ConversionPattern" value="%-5p[%c{1}]: %m%n" />
+			<param name="ConversionPattern"
+				value="%d{dd MMM yyyy HH:mm:ss a} %5p %c{1}:%L - %m%n" />
 		</layout>
 	</appender>
-	<appender name="RollingfileAppender"
+	<appender name="fileAppender"
 		class="org.apache.log4j.RollingFileAppender">
-		<param name="append" value="false" />
-		<param name="file" value="Logs/Testlogs.log" />
+		<param name="append" value="true" />
+		<param name="file"
+			value="Logs/FileLogs/${current.date.time}_Testlogs.log" />
+		<param name="maxFileSize" value="5000KB" />
+		<param name="maxBackupIndex" value="1" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern"
-				value="%d{dd-MM-yyyy HH:mm:ss}%x %-5p[%c{1}]: %m%n" />
-		</layout>
-	</appender>	
-	<appender name="FileAppender"
-		class="org.apache.log4j.FileAppender">
-		<param name="append" value="false" />
-		<param name="file" value="Logs/FileLogs/${current.date}_Testlogs.log" />
-		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern"
-				value="%d{dd-MM-yyyy HH:mm:ss}%x %-5p[%c{1}]: %m%n" />
+				value="%d{dd MMM yyyy HH:mm:ss a} %5p %c{1}:%L - %m%n" />
 		</layout>
 	</appender>
+	<!-- <appender name="FileAppender" class="org.apache.log4j.FileAppender"> 
+		<param name="append" value="false" /> <param name="file" value="Logs/FileLogs/${current.date.time}_Testlogs.log" 
+		/> <layout class="org.apache.log4j.PatternLayout"> <param name="ConversionPattern" 
+		value="%d{dd-MM-yyyy HH:mm:ss}%x %-5p[%c{1}]: %m%n" /> </layout> </appender> -->
 	<root>
 		<level value="INFO" />
 		<appender-ref ref="consoleAppender" />
-		<appender-ref ref="RollingfileAppender" />
-		<appender-ref ref="FileAppender" />
-
+		<!-- <appender-ref ref="FileAppender" /> -->
+		<appender-ref ref="fileAppender" />
 	</root>
 </log4j:configuration>

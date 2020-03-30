@@ -1,17 +1,16 @@
 package com.tigerAir.mobileAutomation.utils;
 
-import java.util.Properties;
-
 import org.openqa.selenium.By;
 
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-import com.tigerAir.mobileAutomation.Base.BasePage;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.tigerAir.mobileAutomation.pagesObjects.BookingOverviewPage;
 import com.tigerAir.mobileAutomation.pagesObjects.ContactDetailsPage;
 import com.tigerAir.mobileAutomation.pagesObjects.CreditCardPage;
 import com.tigerAir.mobileAutomation.pagesObjects.DepartingBaggagePage;
 import com.tigerAir.mobileAutomation.pagesObjects.FlightDetailsPage;
+import com.tigerAir.mobileAutomation.pagesObjects.HomePage;
 import com.tigerAir.mobileAutomation.pagesObjects.PassengerDetailsPage;
 import com.tigerAir.mobileAutomation.pagesObjects.PassengersListPage;
 import com.tigerAir.mobileAutomation.pagesObjects.PassengersSelectionPage;
@@ -25,19 +24,14 @@ import com.tigerAir.mobileAutomation.pagesObjects.SportsEquipmentPage;
 import com.tigerAir.mobileAutomation.pagesObjects.TermsAndConditionsPage;
 import com.tigerAir.mobileAutomation.pagesObjects.YoungTravellersPage;
 
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
+public class GenericMethods extends ElementUtils {
 
-public class GenericMethods extends BasePage {
-
-	ElementUtils elementUtils = new ElementUtils(driver);
-	ExtentTest test;
-	Properties prop = new Properties();
-	BasePage basePage = new BasePage();
+	ElementUtils elementUtils = new ElementUtils();
 	String fareSelection;
 	String journeyType;
 	String ReturnfareSelection1;
 	String ReturnfareSelection2;
+	ExcelUtil excelUtil = new ExcelUtil();
 
 	public By GenericText(String text) {
 		By FlightFrom = By.xpath("//android.widget.TextView[@text='" + text + "']");
@@ -63,100 +57,97 @@ public class GenericMethods extends BasePage {
 		return toolBarTitle;
 	}
 
-	public GenericMethods(AndroidDriver<AndroidElement> driver) {
-		this.driver = driver;
-		elementUtils = new ElementUtils(driver);
-		prop = basePage.ConfigReader();
-	}
-
 	public void SelectFlightFunction(String clickonCurrencytext, String selectActualCurrency,
 			String clickonReturnButton, String selectJourneyType, String SelectFromWhere, String SelectToWhere,
-			String SelectionDate, int noOfAdults, int noOfchilds, int noofInfants, String departureDate,
+			String SelectionDate, String noOfAdults, String noOfchilds, String noofInfants, String departureDate,
 			String ArrivalDate) {
 
 		try {
-			// journeyType = selectJourneyType;
-			test = ExtentReporters.test;
+			elementUtils.waitForElementNotVisible(loaderPlane);
+			SoftAssertionsonText(HomePage.getBookflightbutton(), "Book Flights");
+			elementUtils.doClick(HomePage.getBookflightbutton());
+			test.log(Status.PASS,
+					MarkupHelper.createLabel("User has clicked on the Book Flights Button", ExtentColor.GREEN));
 			elementUtils.isElementDisplayed(genericTitleText("Search Flights"));
 			elementUtils.doClick(GenericText(clickonCurrencytext));
 			LoggersUtil.info("User has clicked on the Currency text " + clickonCurrencytext);
-			test.log(LogStatus.PASS, "User has clicked the currency successfully :" + clickonCurrencytext);
 			elementUtils.doClick(GenericCurrencyText(selectActualCurrency));
 			LoggersUtil.info("User has Selected the Currency :" + selectActualCurrency);
-			test.log(LogStatus.PASS, "User has selected the actual currency: " + selectActualCurrency);
+			test.log(Status.PASS, MarkupHelper.createLabel(
+					"User has selected the actual currency as : " + selectActualCurrency, ExtentColor.GREEN));
 			elementUtils.doClick(GenericText(clickonReturnButton));
 			LoggersUtil.info("User has clicked on the Return Button");
-			test.log(LogStatus.PASS, "User has clicked on the Journey Type Button");
+			test.log(Status.PASS, "User has clicked on the Journey Type Button");
 			elementUtils.doClick(GenericText(selectJourneyType));
 			LoggersUtil.info("User has clicked on the text" + selectJourneyType);
-			test.log(LogStatus.PASS, "User has selected the Journey as :" + selectJourneyType);
+			test.log(Status.PASS, MarkupHelper
+					.createLabel("User has selected the Journey Type as :  " + selectJourneyType, ExtentColor.GREEN));
 			elementUtils.doClick(SearchFlightPage.getPassengerselectionbutton());
 			adultselection(noOfAdults, noOfchilds, noofInfants);
 			elementUtils.doClick(GenericText("From Where?"));
 			LoggersUtil.info("User has clicked on the Origin");
-			test.log(LogStatus.PASS, "User has clicked on the Origin");
 			elementUtils.scrollAndClickByText(SelectFromWhere);
 			LoggersUtil.info("User has selected the From Where as :" + SelectFromWhere);
-			test.log(LogStatus.PASS, "User has selected the From Where as :" + SelectFromWhere);
+			test.log(Status.PASS, MarkupHelper.createLabel("User has selected from where as :" + SelectFromWhere, ExtentColor.GREEN));
 			elementUtils.scrollAndClickByText(SelectToWhere);
 			LoggersUtil.info("User has selected the To Where as :" + SelectToWhere);
-			test.log(LogStatus.PASS, "User has selected the To Where as :" + SelectToWhere);
+			test.log(Status.PASS, "User has selected the To Where as :" + SelectToWhere);
 			elementUtils.doClick(GenericText("Select Date"));
 			LoggersUtil.info("User has selected the Date");
-			test.log(LogStatus.PASS, "User has selected the Date");
+			test.log(Status.PASS, "User has selected the Date");
 			if (selectJourneyType.equalsIgnoreCase("return")) {
 				elementUtils.doClick(GenericText(departureDate));
 				// elementUtils.isElementVisible(loaderPlane);
 				// elementUtils.isElementDisplayed(loaderPlane);
 				elementUtils.doClick(GenericText(ArrivalDate));
 				LoggersUtil.info("User has selected the Date as :" + SelectionDate);
-				test.log(LogStatus.PASS, "User has selected the Date as :" + SelectionDate);
+				test.log(Status.PASS, "User has selected the Date as :" + SelectionDate);
 			} else {
 				elementUtils.doClick(GenericText(SelectionDate));
 				LoggersUtil.info("User has selected the Date as :" + SelectionDate);
-				test.log(LogStatus.PASS, "User has selected the Date as :" + SelectionDate);
+				test.log(Status.PASS, "User has selected the Date as :" + SelectionDate);
 			}
 			elementUtils.doClick(GenericButton("Continue"));
 			LoggersUtil.info("User has clicked on Continue Button");
-			test.log(LogStatus.PASS, "User has clicked on Continue Button");
+			test.log(Status.PASS, "User has clicked on Continue Button");
 			elementUtils.doClick(GenericButton("Search Flights"));
 			LoggersUtil.info("User has clicked on search flights button");
-			test.log(LogStatus.PASS, "User has clicked on the search flights button");
+			test.log(Status.PASS, "User has clicked on the search flights button");
 			journeyType = selectJourneyType;
 		} catch (Exception ex) {
 			LoggersUtil.error("User is not able to select the flight function" + ex.getMessage());
-			test.log(LogStatus.FAIL, "User is not able to select the flight function");
+			test.log(Status.FAIL, "User is not able to select the flight function");
 		}
+
 	}
 
 	public void selectDepartingflightsFares(String expressFare) {
 		try {
-			test = ExtentReporters.test;
-			elementUtils.waitForElementNotPresent(loaderPlane);
+			elementUtils.waitForElementNotVisible(loaderPlane);
 			elementUtils.isElementDisplayed(genericTitleText("Select Departing Flight"));
 			if (journeyType.equalsIgnoreCase("return")) {
 				elementUtils.doClick(SelectDepartingFlightPage.getSlottime());
 				elementUtils.doClick(SelectDepartingFlightPage.fareTypeSelection(expressFare));
 				LoggersUtil.info("User has selected the first Slot");
-				test.log(LogStatus.PASS, "User has selected the first slot");
+				test.log(Status.PASS, "User has selected the first slot");
 				LoggersUtil.info("User has selected the express fare as :" + expressFare);
-				test.log(LogStatus.PASS, "User has selected the express fare as :" + expressFare);
+				test.log(Status.PASS, "User has selected the express fare as :" + expressFare);
 				ReturnfareSelection1 = expressFare;
 				elementUtils.doClick(SelectDepartingFlightPage.getSlottime());
 				elementUtils.doClick(SelectDepartingFlightPage.fareTypeSelection(expressFare));
 				LoggersUtil.info("User has selected the first Slot");
-				test.log(LogStatus.PASS, "User has selected the first slot");
+				test.log(Status.PASS, "User has selected the first slot");
 				LoggersUtil.info("User has selected the express fare as :" + expressFare);
-				test.log(LogStatus.PASS, "User has selected the express fare as :" + expressFare);
+				test.log(Status.PASS, "User has selected the express fare as :" + expressFare);
 				ReturnfareSelection2 = expressFare;
 
 			} else {
 				elementUtils.doClick(SelectDepartingFlightPage.getSlottime());
 				elementUtils.doClick(SelectDepartingFlightPage.fareTypeSelection(expressFare));
 				LoggersUtil.info("User has selected the first Slot");
-				test.log(LogStatus.PASS, "User has selected the first slot");
+				test.log(Status.PASS, "User has selected the first slot");
 				LoggersUtil.info("User has selected the express fare as :" + expressFare);
-				test.log(LogStatus.PASS, "User has selected the express fare as :" + expressFare);
+				test.log(Status.PASS, "User has selected the express fare as :" + expressFare);
 				fareSelection = expressFare;
 			}
 			/*
@@ -170,7 +161,7 @@ public class GenericMethods extends BasePage {
 			 */
 
 			LoggersUtil.info("User has selected the express fare as :" + expressFare);
-			test.log(LogStatus.PASS, "User has selected the express fare as :" + expressFare);
+			test.log(Status.PASS, "User has selected the express fare as :" + expressFare);
 			fareSelection = expressFare;
 		} catch (Exception ex) {
 			LoggersUtil.error("User has not been able to select flight fare" + ex.getMessage());
@@ -179,23 +170,22 @@ public class GenericMethods extends BasePage {
 
 	public void clickOnPassenger(String passengerListName) {
 		try {
-			test = ExtentReporters.test;
-			elementUtils.waitForElementNotPresent(loaderPlane);
+
+			elementUtils.waitForElementNotVisible(loaderPlane);
 			elementUtils.isElementDisplayed(genericTitleText("Passengers"));
 			elementUtils.doClick(PassengersListPage.PassengerSelection(passengerListName));
 			LoggersUtil.info("User has clicked on the Passenger" + passengerListName);
-			test.log(LogStatus.PASS, "User has clicked on the passenger" + passengerListName);
+			test.log(Status.PASS, "User has clicked on the passenger" + passengerListName);
 
 		} catch (Exception ex) {
 			LoggersUtil.error("User has not been able to click on the passenger" + ex.getMessage());
-			test.log(LogStatus.FAIL, "User has not able to click on the passenger");
+			test.log(Status.FAIL, "User has not able to click on the passenger");
 		}
 	}
 
 	public void enterPassengerDetails(String selectCabonBaggageYesorNo, String selectKGforcabin,
 			String selectKGforCheckin, String selectQueueJumpYesorNo, String selectCarbonOffsetYesorNo,
 			String selectSportsEquipmentYesorNo, String selectSportsEquipmentpiece) {
-		test = ExtentReporters.test;
 		if (elementUtils.isElementVisible(PassengerDetailsPage.getAdultTextTab())) {
 			elementUtils.doClick(PassengerDetailsPage.getSelectdob());
 			elementUtils.enterTextByKeyboard(PassengerDetailsPage.getSelectmonth(), "Feb");
@@ -219,7 +209,11 @@ public class GenericMethods extends BasePage {
 		elementUtils.doClick(PassengerDetailsPage.getOkbutton());
 		elementUtils.isElementDisplayed(PassengerDetailsPage.getNameenter());
 		if (selectCabonBaggageYesorNo.equalsIgnoreCase("Yes")) {
-			elementUtils.scrollAndClickByText("Select Baggage");
+			if (elementUtils.isElementVisible(DepartingBaggagePage.getSelectbaggagetext())) {
+				elementUtils.doClick(DepartingBaggagePage.getSelectbaggagetext());
+			} else {
+				elementUtils.verticalSwipeByPercentagesbyLocator(DepartingBaggagePage.getSelectbaggagetext());
+			}
 			elementUtils.isElementDisplayed(DepartingBaggagePage.getHeadertext());
 			elementUtils.scrollAndClickByText(selectKGforcabin);
 			elementUtils.scrollAndClickByText(selectKGforCheckin);
@@ -292,19 +286,19 @@ public class GenericMethods extends BasePage {
 
 	public void selectionSeatforTravellers(String selectseatyesOrNo, String SeatNo) {
 		try {
-			elementUtils.waitForElementNotPresent(loaderPlane);
+			elementUtils.waitForElementNotVisible(loaderPlane);
 			elementUtils.isElementDisplayed(PassengersListPage.getTitletext());
 			elementUtils.doClick(PassengersListPage.getContinuebutton());
 			elementUtils.isElementDisplayed(genericTitleText("Select Seat"));
 			if (selectseatyesOrNo.equalsIgnoreCase("Yes")) {
 				elementUtils.doClick(SelectSeatPage.getSelectseatbutton());
-				elementUtils.waitForElementNotPresent(loaderPlane);
+				elementUtils.waitForElementNotVisible(loaderPlane);
 				elementUtils.verticalSwipeByPercentagesbyLocator(SelectSeatPage.selectSeatNo(SeatNo));
 				elementUtils.doClick(SelectSeatPage.selectSeatNo(SeatNo));
-				elementUtils.waitForElementNotPresent(loaderPlane);
+				elementUtils.waitForElementNotVisible(loaderPlane);
 				elementUtils.doClick(SelectSeatPage.getDonebutton());
 				elementUtils.doClick(SelectSeatPage.getContinuebutton());
-			} else if (selectseatyesOrNo.equalsIgnoreCase("No") && SeatNo.equalsIgnoreCase("NIL")) {
+			} else if (selectseatyesOrNo.equalsIgnoreCase("No")) {
 				elementUtils.verticalSwipeByPercentagesbyLocator(SelectSeatPage.getContinuewithoutselectionbutton());
 				elementUtils.doClick(SelectSeatPage.getContinuewithoutselectionbutton());
 			}
@@ -315,7 +309,7 @@ public class GenericMethods extends BasePage {
 
 	public void fillingContactDetails(String Address, String City, String PostalCode, String Country, String State,
 			String PhoneNumber, String emailAdress, String confirmEmail) {
-		elementUtils.waitForElementNotPresent(loaderPlane);
+		elementUtils.waitForElementNotVisible(loaderPlane);
 		elementUtils.isElementDisplayed(genericTitleText("Contact Details"));
 		elementUtils.doSendKeys(ContactDetailsPage.getAddresstextbox(), Address);
 		// elementUtils.isElementDisplayed(contactDetailsPage.cityTextBox);
@@ -340,7 +334,7 @@ public class GenericMethods extends BasePage {
 
 	public void paymentsection(String PaymentType, String cardHolderName, String cardNumber, String selectMonth,
 			String selectYear, String cvvID) {
-		elementUtils.waitForElementNotPresent(loaderPlane);
+		elementUtils.waitForElementNotVisible(loaderPlane);
 		elementUtils.isElementDisplayed(genericTitleText("Payment"));
 		if (PaymentType.equalsIgnoreCase("Credit / Debit")) {
 			elementUtils.doClick(PaymentPage.getCreditcardbutton());
@@ -378,9 +372,11 @@ public class GenericMethods extends BasePage {
 		try {
 			elementUtils.isElementDisplayed(CreditCardPage.getSeemybookingbutton());
 			elementUtils.doClick(CreditCardPage.getSeemybookingbutton());
-			elementUtils.waitForElementNotPresent(loaderPlane);
+			elementUtils.waitForElementNotVisible(loaderPlane);
 			elementUtils.isElementDisplayed(BookingOverviewPage.getPnrtext());
 			elementUtils.doGetText(BookingOverviewPage.getPnrtext());
+			excelUtil.setCellData("PNR", "PNR_Number", elementUtils.doGetText(BookingOverviewPage.getPnrtext()));
+			// excelUtil.writeExcel("PNR",elementUtils.doGetText(BookingOverviewPage.getPnrtext());
 		} catch (Exception ex) {
 			LoggersUtil.info("PNR is not getting generated" + ex.getMessage());
 		}
@@ -390,7 +386,7 @@ public class GenericMethods extends BasePage {
 		try {
 			elementUtils.isElementDisplayed(CreditCardPage.getSeemybookingbutton());
 			elementUtils.doClick(CreditCardPage.getSeemybookingbutton());
-			elementUtils.waitForElementNotPresent(loaderPlane);
+			elementUtils.waitForElementNotVisible(loaderPlane);
 			elementUtils.isElementDisplayed(BookingOverviewPage.getPnrtext());
 			elementUtils.doGetText(BookingOverviewPage.getPnrtext());
 		} catch (Exception ex) {
@@ -398,19 +394,33 @@ public class GenericMethods extends BasePage {
 		}
 	}
 
-	public void adultselection(int noOfAdults, int noOfchilds, int noofInfants) {
-		elementUtils.waitForElementNotPresent(loaderPlane);
+	private void adultselection(String noOfAdultsstr, String noOfchildsstr, String noofInfantsstr) {
+		int noOfAdults = Integer.parseInt(noOfAdultsstr), noOfchilds = Integer.parseInt(noOfchildsstr),
+				noofInfants = Integer.parseInt(noofInfantsstr);
+		elementUtils.waitForElementNotVisible(loaderPlane);
 		elementUtils.isElementDisplayed(PassengersSelectionPage.getAdultplusbutton());
 		for (int i = 0; i < noOfAdults - 1; i++) {
 			elementUtils.doClick(PassengersSelectionPage.getAdultplusbutton());
+			LoggersUtil.info("User has selected Adults as : " + noOfAdults);
+			test.log(Status.PASS,
+					MarkupHelper.createLabel("User has selected Adults as :" + noOfAdults, ExtentColor.GREEN));
 		}
 		for (int i = 0; i < noOfchilds; i++) {
 			elementUtils.doClick(PassengersSelectionPage.getChildplusbutton());
+			LoggersUtil.info("User has selected Child as : " + noOfchilds);
+			test.log(Status.PASS,
+					MarkupHelper.createLabel("User has selected Child as :" + noOfchilds, ExtentColor.GREEN));
 		}
 		for (int i = 0; i < noofInfants; i++) {
 			elementUtils.doClick(PassengersSelectionPage.getInfantplusbutton());
+			LoggersUtil.info("User has selected Infants as " + noofInfants);
+			test.log(Status.PASS,
+					MarkupHelper.createLabel("User has selected Infants as :" + noofInfants, ExtentColor.GREEN));
 		}
 		elementUtils.doClick(PassengersSelectionPage.getContinuebutton());
+		LoggersUtil.info("User has clicked on the Continue button");
+		test.log(Status.PASS, MarkupHelper.createLabel("USer has clicked on the Continue Button", ExtentColor.GREEN));
+		SoftAssertionsonText(SearchFlightPage.getPromocodetext(), "Got a promo code?");
 	}
 
 	public void fillPassengerDetails(String selectCabonBaggageYesorNo, String selectKGforcabin,

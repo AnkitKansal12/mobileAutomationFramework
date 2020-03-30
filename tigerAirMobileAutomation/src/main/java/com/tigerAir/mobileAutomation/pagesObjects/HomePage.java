@@ -6,42 +6,21 @@ package com.tigerAir.mobileAutomation.pagesObjects;
  * 
  */
 import org.openqa.selenium.By;
-import com.tigerAir.mobileAutomation.Base.BasePage;
-import com.tigerAir.mobileAutomation.utils.ElementUtils;
 
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
+public class HomePage {
 
-public class HomePage extends BasePage {
 
-	AndroidDriver<AndroidElement> driver = null;
-	ElementUtils elementUtils;
 
-	By tigerAirEntertainmentButton = By.xpath("//android.widget.Button[@text='Tigertainment']");
-	By bookFlightButton = By.xpath(
+	private static final By tigerAirEntertainmentButton = By.xpath("//android.widget.Button[@text='Tigertainment']");
+	private static final By bookFlightButton = By.xpath(
 			"//android.widget.Button[@text='Book Flights' and @resource-id='au.com.tigerair.booking:id/home_book_flight_button']");
-
-	public HomePage(AndroidDriver<AndroidElement> driver) {
-		this.driver = driver;
-		elementUtils = new ElementUtils(driver);
-
+	public static By getTigerairentertainmentbutton() {
+		return tigerAirEntertainmentButton;
+	}
+	public static By getBookflightbutton() {
+		return bookFlightButton;
 	}
 
-	// page actions:
-	public void clickonTigerEntertainmentButton() {
-		elementUtils.doClick(tigerAirEntertainmentButton);
-	}
-
-	public String getTigerEntainmentText() {
-		return elementUtils.doGetText(tigerAirEntertainmentButton);
-	}
-
-	public Boolean BookFlightisDisplayed() {
-		return elementUtils.isElementDisplayed(bookFlightButton);
-	}
-
-	public void clickonBookFlightButton() {
-		elementUtils.doClick(bookFlightButton);
-	}
+	
 
 }

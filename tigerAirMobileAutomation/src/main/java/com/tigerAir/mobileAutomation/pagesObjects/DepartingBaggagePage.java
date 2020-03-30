@@ -8,6 +8,11 @@ public class DepartingBaggagePage {
 	private static final By journeyTypeReturnTypeButton = By.xpath("//android.widget.TextView[@text='Return']");
 	private static final By headerText = By
 			.xpath("//*[@resource-id='au.com.tigerair.booking:id/headertext' and @text='Departing Baggage']");
+	private static final By selectBaggageText = By.xpath("//android.widget.TextView[@text='Select Baggage']");
+
+	public static By getSelectbaggagetext() {
+		return selectBaggageText;
+	}
 
 	public static final By getCabinBaggage(String selectKG) {
 		return (By

@@ -5,12 +5,13 @@
     <classes>
       <class name="com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases">
         <methods>
-          <include name="OneAdult_OneChild_OneWay_Currency_AUD_FareType_Light_Cabin_QueueJump_Seat_Upfront_FOP_Visa"/>
           <include name="setUP"/>
+          <include name="OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC" invocation-numbers="0"/>
           <include name="stopService"/>
           <include name="reportTearDown"/>
           <include name="tearDown"/>
           <include name="startReport"/>
+          <include name="appSetup"/>
         </methods>
       </class> <!-- com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases -->
     </classes>

@@ -16,11 +16,10 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
- 
 
 import com.tigerAir.mobileAutomation.Base.BasePage;
 
-public class SendEmailUtil extends BasePage{
+public class SendEmailUtil extends BasePage {
 
 	Properties props = new Properties();
 
@@ -79,7 +78,7 @@ public class SendEmailUtil extends BasePage{
 
 			// Mention the file which you want to send
 			String filename = "C://TestingTeamFrameworks//tigerAirMobileAutomation//excel//testData.xlsx";
-			String Reports="C://TestingTeamFrameworks//tigerAirMobileAutomation//Reports//Reports_2020_01_26_09_57_34ExtentReportResults.html";
+			String Reports = "C://TestingTeamFrameworks//tigerAirMobileAutomation//Reports//Reports_2020_01_26_09_57_34ExtentReportResults.html";
 
 			// Create data source and pass the filename
 			DataSource source = new FileDataSource(Reports);

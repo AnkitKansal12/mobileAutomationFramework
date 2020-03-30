@@ -11,16 +11,16 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.ServerSocket;
 import java.net.URL;
-
 import java.util.Properties;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.apache.log4j.xml.DOMConfigurator;
-
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.tigerAir.mobileAutomation.utils.Constants;
 import com.tigerAir.mobileAutomation.utils.ExtentReporters;
 import com.tigerAir.mobileAutomation.utils.LoggersUtil;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
@@ -31,24 +31,31 @@ import io.appium.java_client.service.local.flags.GeneralServerFlag;
 
 public class BasePage extends ExtentReporters {
 
-	public AndroidDriver<AndroidElement> driver = null;
-	private Properties prop = null;
+	public static AndroidDriver<AndroidElement> driver = null;
+	public Properties prop = null;
 	private AppiumServiceBuilder builder;
-	private DesiredCapabilities cap;
-	AppiumDriverLocalService service;
+	private DesiredCapabilities cap = new DesiredCapabilities();
+	public AppiumDriverLocalService service;
 
 	private void startServer(int port) {
-		boolean flag = checkIfServerisRunning(port);
-		if (!flag) {
-			builder = new AppiumServiceBuilder();
-			builder.withIPAddress("127.0.0.1");
-			builder.usingPort(port);
-			builder.withCapabilities(cap);
-			builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
-			builder.withArgument(GeneralServerFlag.LOG_LEVEL, "error");
-			service = AppiumDriverLocalService.buildService(builder);
-			service.start();
+		try {
+			if (checkIfServerisRunning(port)) {
+				LoggersUtil.info("Started on the port::" + port);
+			} else {
+				builder = new AppiumServiceBuilder();
+				builder.withIPAddress("127.0.0.1");
+				builder.usingPort(port);
+				builder.withCapabilities(cap);
+				builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
+				builder.withArgument(GeneralServerFlag.LOG_LEVEL, "error");
+				service = AppiumDriverLocalService.buildService(builder);
+				service.start();
+				LoggersUtil.info("Re-started on the port::" + port);
+			}
+		} catch (Exception ex) {
+			LoggersUtil.info("Some Exception occured::" + ex.getMessage());
 		}
+
 	}
 
 	private boolean checkIfServerisRunning(int port) {
@@ -58,7 +65,6 @@ public class BasePage extends ExtentReporters {
 			serverSocket = new ServerSocket(port);
 			serverSocket.close();
 		} catch (IOException e) {
-			// TODO: If Controls Comes then it means port is in use
 			isServerRunning = true;
 		} finally {
 			serverSocket = null;
@@ -68,17 +74,13 @@ public class BasePage extends ExtentReporters {
 
 	private void startEmulator() {
 		try {
-
 			Runtime.getRuntime().exec(System.getProperty("user.dir")
 					+ "/src/main/java/com/tigerAir/mobileAutomation/emulator/startEmulator.bat");
 			LoggersUtil.info("Emulator has started");
 			Runtime.getRuntime().exec("adb uninstall io.appium.settings");
 			LoggersUtil.info("Appium Settings has been uninstalled succesfully");
-
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println(e.getMessage());
+			LoggersUtil.info("Some Exception occured::" + e.getMessage());
 			LoggersUtil.error("Emulator not started");
 		}
 	}
@@ -90,7 +92,7 @@ public class BasePage extends ExtentReporters {
 			LoggersUtil.info("Emulator has been ended");
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.out.println(e.getMessage());
+			LoggersUtil.info("Some Exception occured::" + e.getMessage());
 			LoggersUtil.error("Emulator not ended");
 		}
 	}
@@ -100,12 +102,12 @@ public class BasePage extends ExtentReporters {
 	 * @param ApkFile
 	 * @return This returns AndroidDriver
 	 */
-	public AndroidDriver<AndroidElement> MobileCapabilitieswithEmulators() {
+	public void MobileCapabilitieswithEmulators() {
 		try {
 			startServer(4723);
 			DOMConfigurator.configure(System.getProperty("user.dir") + "/src/test/resources/Log4j.xml");
-			File appDir = new File("src/test/resources/app");
-			File app = new File(appDir, prop.getProperty("ApkFile"));
+			//PropertyConfigurator.configure(System.getProperty("user.dir") + "/src/test/resources/Log4j.properties");
+			
 			cap = new DesiredCapabilities();
 			cap.setCapability(MobileCapabilityType.EVENT_TIMINGS, true);
 			cap.setCapability(MobileCapabilityType.DEVICE_NAME, prop.getProperty("SamsungAndroidEmulatorName"));
@@ -117,17 +119,27 @@ public class BasePage extends ExtentReporters {
 			cap.setCapability("sendKeyStrategy", "setValue");
 			cap.setCapability("appPackage", "au.com.tigerair.booking");
 			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+			LoggersUtil.info("Mobile Capabilities has been set successfully");
+		} catch (Exception e) {
+			LoggersUtil.error("Some Exception has occured::" + e.getMessage());
+		}
+	}
 
-			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
-			cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-			cap.setCapability("autoGrantPermissions", true);
+	public void applauncher() {
+		File appDir = new File("src/test/resources/app");
+		File app = new File(appDir, prop.getProperty("ApkFile"));
+		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+		cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+		cap.setCapability("autoGrantPermissions", true);
+		try {
 			driver = new AndroidDriver<AndroidElement>(new URL(Constants.CONNECTION_URL), cap);
 			LoggersUtil.info("Appium Server has been started");
+			LoggersUtil.info("Application has been launched Successfully");
+
 		} catch (MalformedURLException e) {
-			System.out.println(e.getMessage());
-			e.printStackTrace();
+			LoggersUtil.error("Some Exception has occured::" + e.getMessage());
 		}
-		return driver;
+
 	}
 
 	public AndroidDriver<AndroidElement> MobileCapabilitieswithRealDevice() {
@@ -179,7 +191,6 @@ public class BasePage extends ExtentReporters {
 
 	public void stopServer() {
 		if (service != null) {
-			driver.quit();
 			service.stop();
 		}
 		LoggersUtil.info("Appium Server has been ended");

@@ -5,9 +5,9 @@ import java.util.Date;
 
 import org.apache.log4j.Logger;
 
-public class LoggersUtil {
+public class LoggersUtil extends GenericMethods{
 
-	private static Logger Log = Logger.getLogger(LoggersUtil.class.getSimpleName());
+	public static Logger Log = Logger.getLogger(LoggersUtil.class.getName());
 	
 	/**
 	 * This Method starts the Test Case
@@ -15,17 +15,17 @@ public class LoggersUtil {
 	 */
 	
 	static{
-	    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-	    System.setProperty("current.date", dateFormat.format(new Date()));
+	    SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss-a");
+	    System.setProperty("current.date.time", dateFormat.format(new Date()));
 	}
 
-	public static void startTestCase(String sTestCaseName) {
+	public static void startTestCase(String test) {
 
 		Log.info("****************************************************************************************");
 
 		Log.info("****************************************************************************************");
 
-		Log.info("$$$$$$$$$$$$$$$$$$$$$                 " + sTestCaseName + "       $$$$$$$$$$$$$$$$$$$$$$$$$");
+		Log.info("$$$$$$$$$$$$$$$$$$$$$                 " + test + "       $$$$$$$$$$$$$$$$$$$$$$$$$");
 
 		Log.info("****************************************************************************************");
 

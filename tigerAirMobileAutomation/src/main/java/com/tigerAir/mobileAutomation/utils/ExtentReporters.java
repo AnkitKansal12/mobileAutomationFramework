@@ -1,43 +1,32 @@
 package com.tigerAir.mobileAutomation.utils;
 
-
 import java.text.SimpleDateFormat;
 
-
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-
-
-/*import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;*/
-
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ExtentReporters {
 
-	ExtentReports extent;
-	static AndroidDriver<AndroidElement> driver = null;
+	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentReports report;
 	public static ExtentTest test;
 
 	public ExtentReporters() {
 		String dateName = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss").format(new java.util.Date());
-		report = new ExtentReports(
-				System.getProperty("user.dir") + "//Reports" + "/Reports_" + dateName + "ExtentReportResults.html");
+		htmlReporter = new ExtentHtmlReporter(
+				System.getProperty("user.dir") + "/src/test/resources/Reports/" + dateName + "AutomationReports.html");
+		report = new ExtentReports();
+		report.attachReporter(htmlReporter);
+		report.setSystemInfo("Environment", "UAT");
+		report.setSystemInfo("User Name", "Ankit Kansal");
+		htmlReporter.config().setDocumentTitle("AutomationReports");
+		// Name of the report
+		htmlReporter.config().setReportName("MobileTestAutomationReports ");
+		// Dark Theme
+		htmlReporter.config().setTheme(Theme.STANDARD);
+
 	}
+
 }

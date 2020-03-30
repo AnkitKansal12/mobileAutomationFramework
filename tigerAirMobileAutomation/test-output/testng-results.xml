@@ -2,39 +2,235 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="218579" started-at="2020-03-19T15:36:12 IST" finished-at="2020-03-19T15:39:51 IST">
+  <suite name="Default suite" duration-ms="221839" started-at="2020-03-30T10:00:13 IST" finished-at="2020-03-30T10:03:55 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="218579" started-at="2020-03-19T15:36:12 IST" finished-at="2020-03-19T15:39:51 IST">
+    <test name="Default test" duration-ms="221839" started-at="2020-03-30T10:00:13 IST" finished-at="2020-03-30T10:03:55 IST">
       <class name="com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d]" name="startReport" is-config="true" duration-ms="13" started-at="2020-03-19T15:36:12 IST" finished-at="2020-03-19T15:36:12 IST">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="startReport" is-config="true" duration-ms="24" started-at="2020-03-30T10:00:13 IST" finished-at="2020-03-30T10:00:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setUP()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d]" name="setUP" is-config="true" duration-ms="13807" started-at="2020-03-19T15:36:12 IST" finished-at="2020-03-19T15:36:26 IST">
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="setUP" is-config="true" duration-ms="24" started-at="2020-03-30T10:00:13 IST" finished-at="2020-03-30T10:00:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method status="PASS" signature="OneAdult_OneChild_Return_Currency_AUD_FareType_Light_Cabin_QueueJump_FOP_VISA_DB()[pri:9, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d]" name="OneAdult_OneChild_Return_Currency_AUD_FareType_Light_Cabin_QueueJump_FOP_VISA_DB" duration-ms="204741" started-at="2020-03-19T15:36:26 IST" description="This Test Case is to validate OneWay Journey with One Adult and One Child" finished-at="2020-03-19T15:39:51 IST">
+        <test-method status="PASS" signature="appSetup()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="appSetup" is-config="true" duration-ms="23645" started-at="2020-03-30T10:00:14 IST" finished-at="2020-03-30T10:00:38 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OneAdult_OneChild_Return_Currency_AUD_FareType_Light_Cabin_QueueJump_FOP_VISA_DB -->
-        <test-method status="PASS" signature="reportTearDown(org.testng.ITestResult)[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d]" name="reportTearDown" is-config="true" duration-ms="1" started-at="2020-03-19T15:39:51 IST" finished-at="2020-03-19T15:39:51 IST">
+        </test-method> <!-- appSetup -->
+        <test-method status="PASS" signature="OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC" duration-ms="196363" started-at="2020-03-30T10:00:38 IST" description="This Test Case is to validate OneWay Journey with One Adult" data-provider="getData" finished-at="2020-03-30T10:03:54 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=OneAdult_OneChild_Return_Currency_AUD_FareType_Light_Cabin_QueueJump_FOP_VISA_DB status=SUCCESS method=BookingModuleTestCases.OneAdult_OneChild_Return_Currency_AUD_FareType_Light_Cabin_QueueJump_FOP_VISA_DB()[pri:9, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d] output={null}]]]>
+                <![CDATA[1Adult_OneWay_Currency(AUD)_FareType(Light)_FOP(VISA CC)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[AUD]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[AUD]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Return]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[One Way]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Sydney]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Melbourne]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[30]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[21]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[LIGHT]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Adult 1]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[no]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[null]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[null]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[no]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[no]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[no]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[null]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[14 Villeneuve Street]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[DARRAWEIT GUIM]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[3756]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[Australia]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[Australian Capital Territory]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[+16198718785]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[p@a.com]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[p@a.com]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[Credit / Debit]]>
+              </value>
+            </param>
+            <param index="33">
+              <value>
+                <![CDATA[PP Heins]]>
+              </value>
+            </param>
+            <param index="34">
+              <value>
+                <![CDATA[4444333322221111]]>
+              </value>
+            </param>
+            <param index="35">
+              <value>
+                <![CDATA[Mar]]>
+              </value>
+            </param>
+            <param index="36">
+              <value>
+                <![CDATA[2021]]>
+              </value>
+            </param>
+            <param index="37">
+              <value>
+                <![CDATA[211]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC -->
+        <test-method status="PASS" signature="reportTearDown(org.testng.ITestResult)[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="reportTearDown" is-config="true" duration-ms="1003" started-at="2020-03-30T10:03:54 IST" finished-at="2020-03-30T10:03:55 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC status=SUCCESS method=BookingModuleTestCases.OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportTearDown -->
-        <test-method status="PASS" signature="stopService()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d]" name="stopService" is-config="true" duration-ms="6" started-at="2020-03-19T15:39:51 IST" finished-at="2020-03-19T15:39:51 IST">
+        <test-method status="PASS" signature="stopService()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="stopService" is-config="true" duration-ms="111" started-at="2020-03-30T10:03:55 IST" finished-at="2020-03-30T10:03:55 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopService -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@8e0379d]" name="tearDown" is-config="true" duration-ms="260" started-at="2020-03-19T15:39:51 IST" finished-at="2020-03-19T15:39:51 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="tearDown" is-config="true" duration-ms="693" started-at="2020-03-30T10:03:55 IST" finished-at="2020-03-30T10:03:56 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

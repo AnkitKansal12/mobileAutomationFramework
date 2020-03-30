@@ -8,34 +8,43 @@ import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import static io.appium.java_client.touch.offset.PointOption.point;
 import static java.time.Duration.ofMillis;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.asserts.SoftAssert;
 
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.model.Log;
-import com.tigerAir.mobileAutomation.pagesObjects.FlightDetailsPage;
-import com.tigerAir.mobileAutomation.pagesObjects.PassengerDetailsPage;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.MediaEntityModelProvider;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.Markup;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.tigerAir.mobileAutomation.Base.BasePage;
 
+import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 
-public class ElementUtils {
+public class ElementUtils extends BasePage {
 
-	AndroidDriver<AndroidElement> driver;
-	ExtentTest test;
-	// GenericMethods genericMethod = new GenericMethods(driver);
-
-	public ElementUtils(AndroidDriver<AndroidElement> driver) {
-		this.driver = driver;
-		test = ExtentReporters.test;
-	}
+	AndroidElement element = null;
+	public String screenShotPath;
+	public SoftAssert softAssert;
 
 	/**
 	 * 
@@ -44,22 +53,21 @@ public class ElementUtils {
 	 */
 	public AndroidElement getElement(By locator) {
 		waitForElementPresent(locator);
-		AndroidElement element = null;
 		try {
 			element = driver.findElement(locator);
 		} catch (Exception e) {
-			LoggersUtil.error("Some exception occurred while creating webelement " + locator);
+			LoggersUtil.error("Some exception occurred while creating webelement " + locator + e);
 		}
 		return element;
 	}
 
 	public AndroidElement getElementbyLocator(By locator) {
 		waitForElementVisibility(locator);
-		AndroidElement element = null;
+		element = null;
 		try {
 			element = driver.findElement(locator);
 		} catch (Exception e) {
-			LoggersUtil.error("Some exception occurred while creating webelement " + locator);
+			LoggersUtil.error("Some exception occurred while creating webelement " + locator + e);
 		}
 		return element;
 	}
@@ -72,17 +80,16 @@ public class ElementUtils {
 
 	public void waitForElementPresent(By locator) {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 100);
+			WebDriverWait wait = new WebDriverWait(driver, 50);
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		} catch (Exception e) {
-			e.printStackTrace();
-			LoggersUtil.error("Some exception has occured during wait for an element" + e);
+			LoggersUtil.error("Some exception has occured during wait for an element" + e.getMessage());
 		}
 	}
 
 	public void waitForElementVisibility(By locator) {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 1);
+			WebDriverWait wait = new WebDriverWait(driver, 5);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		} catch (Exception e) {
 			LoggersUtil
@@ -154,7 +161,7 @@ public class ElementUtils {
 	 */
 
 	public boolean isElementDisplayed(By locator) {
-		try {			
+		try {
 			return getElement(locator).isDisplayed();
 		} catch (Exception e) {
 			LoggersUtil.error("Some exception occurred while checking webelement displayed " + locator);
@@ -239,13 +246,18 @@ public class ElementUtils {
 	}
 
 	public void verticalSwipeByPercentages(double startPercentage, double endPercentage, double anchorPercentage) {
-		Dimension size = driver.manage().window().getSize();
-		int anchor = (int) (size.width * anchorPercentage);
-		int startPoint = (int) (size.height * startPercentage);
-		int endPoint = (int) (size.height * endPercentage);
+		try {
+			Dimension size = driver.manage().window().getSize();
+			int anchor = (int) (size.width * anchorPercentage);
+			int startPoint = (int) (size.height * startPercentage);
+			int endPoint = (int) (size.height * endPercentage);
 
-		new TouchAction(driver).press(point(anchor, startPoint)).waitAction(waitOptions(ofMillis(1000)))
-				.moveTo(point(anchor, endPoint)).release().perform();
+			new TouchAction(driver).press(point(anchor, startPoint)).waitAction(waitOptions(ofMillis(1000)))
+					.moveTo(point(anchor, endPoint)).release().perform();
+
+		} catch (Exception ex) {
+			LoggersUtil.error("Some Exception has been occured" + ex);
+		}
 	}
 
 	/*
@@ -258,18 +270,7 @@ public class ElementUtils {
 	 * } }
 	 */
 
-	public void swipeByElements(AndroidElement startElement, AndroidElement endElement) {
-		int startX = startElement.getLocation().getX() + (startElement.getSize().getWidth() / 2);
-		int startY = startElement.getLocation().getY() + (startElement.getSize().getHeight() / 2);
-
-		int endX = endElement.getLocation().getX() + (endElement.getSize().getWidth() / 2);
-		int endY = endElement.getLocation().getY() + (endElement.getSize().getHeight() / 2);
-
-		new TouchAction(driver).press(point(startX, startY)).waitAction(waitOptions(ofMillis(1000)))
-				.moveTo(point(endX, endY)).release().perform();
-	}
-
-	public void waitForElementNotPresent(By locator) {
+	public void waitForElementNotVisible(By locator) {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, 200000);
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
@@ -304,21 +305,26 @@ public class ElementUtils {
 						"//android.widget.Button[@text='Next Passenger'] | //android.widget.Button[@text='Continue']"));
 				if (status) {
 
-					verticalSwipeByPercentages(0.6, 0.3, 0.5);
-					/*if (isElementVisible(FlightDetailsPage.getFlightdetailstext())) {
-						doClick(FlightDetailsPage.getClosebutton());
-					}*/
+					// verticalSwipeByPercentages(0.5, 0.3, 0.5);
+					scrollDown();
+					/*
+					 * if (isElementVisible(FlightDetailsPage.getFlightdetailstext())) {
+					 * doClick(FlightDetailsPage.getClosebutton()); }
+					 */
 				}
 				flag = false;
 			} else {
-				verticalSwipeByPercentages(0.6, 0.3, 0.5);
-				/*if (isElementVisible(FlightDetailsPage.getFlightdetailstext())) {
-					doClick(FlightDetailsPage.getClosebutton());
-				}*/
+				// verticalSwipeByPercentages(0.5, 0.3, 0.5);
+				scrollDown();
+				/*
+				 * if (isElementVisible(FlightDetailsPage.getFlightdetailstext())) {
+				 * doClick(FlightDetailsPage.getClosebutton()); }
+				 */
 				boolean btnStatus = isElementVisible(locator);
 				// btnStatus = isElementVisible(By.xpath("//*[@text='Next Passenger']"));
 				if (btnStatus) {
-					verticalSwipeByPercentages(0.6, 0.3, 0.5);
+					// verticalSwipeByPercentages(0.5, 0.3, 0.5);
+					scrollDown();
 					flag = false;
 					// break;
 				}
@@ -340,6 +346,57 @@ public class ElementUtils {
 			r.append((char) nextRandomChar);
 		}
 		return r.toString();
-	}	
+	}
+
+	public void scrollDown() {
+		Dimension dimension = driver.manage().window().getSize();
+		int scrollStart = (int) (dimension.getHeight() * 0.5);
+		int scrollEnd = (int) (dimension.getHeight() * 0.2);
+
+		new TouchAction((PerformsTouchActions) driver).press(PointOption.point(0, scrollStart))
+				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1))).moveTo(PointOption.point(0, scrollEnd))
+				.release().perform();
+
+	}
+
+	public void SoftAssertionsonText(By locator, String ExpectedText) {
+		String screenShotPath = getScreenshot("automationScreenshot");
+		try {
+			softAssert.assertEquals(doGetText(locator), ExpectedText);
+			LoggersUtil.info(ExpectedText + " : is getting displayed");
+			/*
+			 * test.log(Status.PASS, MarkupHelper.createLabel(ExpectedText +
+			 * " : is getting	displayed", ExtentColor.PURPLE)); test.log(Status.PASS,
+			 * "This Test Case is Passed",
+			 * MediaEntityBuilder.createScreenCaptureFromPath(screenShotPath).build());
+			 */
+		} catch (Exception ex) {
+			LoggersUtil.error(ExpectedText+" : is not getting displayed");
+			/*
+			 * test.log(Status.FAIL, MarkupHelper.createLabel(ExpectedText +
+			 * " : is not getting	displayed", ExtentColor.RED)); try {
+			 * test.log(Status.FAIL, "This Test Case is Passed",
+			 * MediaEntityBuilder.createScreenCaptureFromPath(screenShotPath).build()); }
+			 * catch (IOException e) { // TODO Auto-generated catch block
+			 * e.printStackTrace();
+			 */
+		}
+	}
+
+	public String getScreenshot(String screenshotName) {
+		String dateName = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss").format(new java.util.Date());
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String destination = "/src/test/resources/Reports/screenshots" + "/screenShot_" + screenshotName + "_"
+				+ dateName + ".png";
+		File destFile = new File(destination);
+		try {
+			FileUtils.copyFile(source, destFile);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return destination;
+
+	}
 
 }
