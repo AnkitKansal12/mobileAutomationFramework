@@ -6,7 +6,7 @@
       <class name="com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases">
         <methods>
           <include name="setUP"/>
-          <include name="OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC" invocation-numbers="0"/>
+          <include name="OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC"/>
           <include name="stopService"/>
           <include name="reportTearDown"/>
           <include name="tearDown"/>

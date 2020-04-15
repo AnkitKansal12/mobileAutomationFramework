@@ -37,10 +37,10 @@ import io.appium.java_client.android.AndroidElement;
 
 public class BookingModuleTestCases extends GenericMethods {
 
-	BasePage basePage;	
+	BasePage basePage;
 	ExtentReporters er;
-	GenericMethods genericMethods;	
-	//String screenShotPath;
+	GenericMethods genericMethods;
+	// String screenShotPath;
 	SendEmailUtil sendutil;
 	String concantenate = ".";
 	ExcelUtil ex;
@@ -49,9 +49,9 @@ public class BookingModuleTestCases extends GenericMethods {
 	public void startReport() {
 
 		er = new ExtentReporters();
-		genericMethods = new GenericMethods();		
+		genericMethods = new GenericMethods();
 		sendutil = new SendEmailUtil();
-		ex = new ExcelUtil();	
+		ex = new ExcelUtil();
 		softAssert = new SoftAssert();
 
 	}
@@ -72,16 +72,6 @@ public class BookingModuleTestCases extends GenericMethods {
 		applauncher();
 	}
 
-	/*
-	 * @Test(dataProvider = "getData") public void testDatacheck(String Username,
-	 * String Password, String TestCaseName) { test =
-	 * ExtentReporters.report.createTest(TestCaseName); test.log(Status.PASS,
-	 * "Application has been launched successfully");
-	 * LoggersUtil.startTestCase(TestCaseName); System.out.println("User::" +
-	 * Username); System.out.println("Pass::" + Password);
-	 * 
-	 * }
-	 */
 	@DataProvider(name = "getData")
 	public Object[][] testDataForm() {
 		Object[][] data = null;
@@ -93,30 +83,6 @@ public class BookingModuleTestCases extends GenericMethods {
 		}
 		return data;
 	}
-
-	/*
-	 * // @Test(priority = 1, description = "This Test Case is to validate OneWay //
-	 * Journey with One Adult", invocationCount=2) public void
-	 * OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC() throws Exception {
-	 * 
-	 * test = ExtentReporters.report.createTest(
-	 * "OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC");
-	 * test.log(Status.PASS, "Application has been launched successfully");
-	 * LoggersUtil.startTestCase(test.getModel().getName());
-	 * genericMethods.SelectFlightFunction("AUD", "AUD", "Return", "One Way",
-	 * "Sydney", "Melbourne", "30", 1, 0, 0, "20", "21");
-	 * genericMethods.selectDepartingflightsFares("LIGHT");
-	 * genericMethods.clickOnPassenger("Adult 1");
-	 * genericMethods.fillPassengerDetails("no", null, null, "no", "no", "no",
-	 * null); genericMethods.selectionSeatforTravellers("No", "Nil");
-	 * genericMethods.fillingContactDetails("14 Villeneuve Street",
-	 * "DARRAWEIT GUIM", "3756", "Australia", "Australian Capital Territory",
-	 * "+6198718785", "p@a.com", "p@a.com");
-	 * genericMethods.paymentsection("Credit / Debit", "PP Heins",
-	 * "4444333322221111", "Mar", "2021", "211");
-	 * 
-	 * }
-	 */
 
 	@Test(description = "This Test Case is to validate OneWay Journey with One Adult", dataProvider = "getData")
 	public void OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC(String TestCaseName, String CurrencyText,
@@ -146,7 +112,6 @@ public class BookingModuleTestCases extends GenericMethods {
 		genericMethods.paymentsection(PaymentType, cardHolderName, cardNumber, selectMonth, selectYear, cvvID);
 		softAssert.assertAll();
 	}
-	
 
 	@AfterTest
 	public void stopService() {
@@ -178,10 +143,11 @@ public class BookingModuleTestCases extends GenericMethods {
 			test.log(Status.FAIL,
 					MarkupHelper.createLabel(result.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 			screenShotPath = concantenate + getScreenshot(result.getName());
-			//test.log(Status.FAIL,result.getName(),MediaEntityBuilder.createScreenCaptureFromPath(screenShotPath).build());
-			//System.out.println("screenShotPath: " + screenShotPath);
+			// test.log(Status.FAIL,result.getName(),MediaEntityBuilder.createScreenCaptureFromPath(screenShotPath).build());
+			// System.out.println("screenShotPath: " + screenShotPath);
 			test.addScreenCaptureFromPath(screenShotPath); // adding screenshot path
-			//test.log(Status.FAIL, (Markup) test.addScreenCaptureFromPath(screenShotPath));
+			// test.log(Status.FAIL, (Markup)
+			// test.addScreenCaptureFromPath(screenShotPath));
 			System.out.println("screenshot add");
 		} else if (result.getStatus() == ITestResult.SKIP) {
 			test.log(Status.SKIP,
@@ -192,17 +158,5 @@ public class BookingModuleTestCases extends GenericMethods {
 		driver.quit();
 
 	}
-
-	/*public static String getScreenshot(AndroidDriver<AndroidElement> driver, String screenshotName) throws IOException {
-		String dateName = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss").format(new java.util.Date());
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		String destination = "/src/test/resources/Reports/screenshots" + "/screenShot_" + screenshotName + "_"
-				+ dateName + ".png";
-		File destFile = new File(destination);
-		FileUtils.copyFile(source, destFile);
-		return destination;
-
-	}*/
 
 }

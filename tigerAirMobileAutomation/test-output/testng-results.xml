@@ -1,236 +1,249 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="221839" started-at="2020-03-30T10:00:13 IST" finished-at="2020-03-30T10:03:55 IST">
+  <suite name="Default suite" duration-ms="15728" started-at="2020-04-15T11:59:51 IST" finished-at="2020-04-15T12:00:07 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="221839" started-at="2020-03-30T10:00:13 IST" finished-at="2020-03-30T10:03:55 IST">
+    <test name="Default test" duration-ms="15728" started-at="2020-04-15T11:59:51 IST" finished-at="2020-04-15T12:00:07 IST">
       <class name="com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="startReport" is-config="true" duration-ms="24" started-at="2020-03-30T10:00:13 IST" finished-at="2020-03-30T10:00:13 IST">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="startReport" is-config="true" duration-ms="23" started-at="2020-04-15T11:59:51 IST" finished-at="2020-04-15T11:59:51 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setUP()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="setUP" is-config="true" duration-ms="24" started-at="2020-03-30T10:00:13 IST" finished-at="2020-03-30T10:00:13 IST">
+        <test-method status="PASS" signature="setUP()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="setUP" is-config="true" duration-ms="29" started-at="2020-04-15T11:59:51 IST" finished-at="2020-04-15T11:59:51 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method status="PASS" signature="appSetup()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="appSetup" is-config="true" duration-ms="23645" started-at="2020-03-30T10:00:14 IST" finished-at="2020-03-30T10:00:38 IST">
+        <test-method status="FAIL" signature="appSetup()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="appSetup" is-config="true" duration-ms="14929" started-at="2020-04-15T11:59:52 IST" finished-at="2020-04-15T12:00:07 IST">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\ankit.1.kansal\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_pre_p_apps' exited with code 20'; Stderr: 'cmd: Can't find service: settings'; Code: '20'
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAP-TZD-0X76360', ip: '192.168.43.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\ankit.1.kansal\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_pre_p_apps' exited with code 20'; Stderr: 'cmd: Can't find service: settings'; Code: '20'
+    at getResponseForW3CError (C:\Users\ankit.1.kansal\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\ankit.1.kansal\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAP-TZD-0X76360', ip: '192.168.43.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: AndroidDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\ankit.1.kansal\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_pre_p_apps' exited with code 20'; Stderr: 'cmd: Can't find service: settings'; Code: '20'
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAP-TZD-0X76360', ip: '192.168.43.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\ankit.1.kansal\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_pre_p_apps' exited with code 20'; Stderr: 'cmd: Can't find service: settings'; Code: '20'
+    at getResponseForW3CError (C:\Users\ankit.1.kansal\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\ankit.1.kansal\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAP-TZD-0X76360', ip: '192.168.43.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:38)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:84)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:94)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:95)
+at com.tigerAir.mobileAutomation.Base.BasePage.applauncher(BasePage.java:135)
+at com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases.appSetup(BookingModuleTestCases.java:72)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.reflect.InvocationTargetException
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
+... 46 more
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\ankit.1.kansal\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_pre_p_apps' exited with code 20'; Stderr: 'cmd: Can't find service: settings'; Code: '20'
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAP-TZD-0X76360', ip: '192.168.43.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\ankit.1.kansal\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_pre_p_apps' exited with code 20'; Stderr: 'cmd: Can't find service: settings'; Code: '20'
+    at getResponseForW3CError (C:\Users\ankit.1.kansal\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\ankit.1.kansal\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+... 51 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- appSetup -->
-        <test-method status="PASS" signature="OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC" duration-ms="196363" started-at="2020-03-30T10:00:38 IST" description="This Test Case is to validate OneWay Journey with One Adult" data-provider="getData" finished-at="2020-03-30T10:03:54 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1Adult_OneWay_Currency(AUD)_FareType(Light)_FOP(VISA CC)]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[AUD]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[AUD]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Return]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[One Way]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Sydney]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Melbourne]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[30]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[20]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[21]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[LIGHT]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[Adult 1]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[no]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[null]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[null]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[no]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[no]]>
-              </value>
-            </param>
-            <param index="20">
-              <value>
-                <![CDATA[no]]>
-              </value>
-            </param>
-            <param index="21">
-              <value>
-                <![CDATA[null]]>
-              </value>
-            </param>
-            <param index="22">
-              <value>
-                <![CDATA[No]]>
-              </value>
-            </param>
-            <param index="23">
-              <value>
-                <![CDATA[No]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[14 Villeneuve Street]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[DARRAWEIT GUIM]]>
-              </value>
-            </param>
-            <param index="26">
-              <value>
-                <![CDATA[3756]]>
-              </value>
-            </param>
-            <param index="27">
-              <value>
-                <![CDATA[Australia]]>
-              </value>
-            </param>
-            <param index="28">
-              <value>
-                <![CDATA[Australian Capital Territory]]>
-              </value>
-            </param>
-            <param index="29">
-              <value>
-                <![CDATA[+16198718785]]>
-              </value>
-            </param>
-            <param index="30">
-              <value>
-                <![CDATA[p@a.com]]>
-              </value>
-            </param>
-            <param index="31">
-              <value>
-                <![CDATA[p@a.com]]>
-              </value>
-            </param>
-            <param index="32">
-              <value>
-                <![CDATA[Credit / Debit]]>
-              </value>
-            </param>
-            <param index="33">
-              <value>
-                <![CDATA[PP Heins]]>
-              </value>
-            </param>
-            <param index="34">
-              <value>
-                <![CDATA[4444333322221111]]>
-              </value>
-            </param>
-            <param index="35">
-              <value>
-                <![CDATA[Mar]]>
-              </value>
-            </param>
-            <param index="36">
-              <value>
-                <![CDATA[2021]]>
-              </value>
-            </param>
-            <param index="37">
-              <value>
-                <![CDATA[211]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC" duration-ms="0" started-at="2020-04-15T12:00:07 IST" description="This Test Case is to validate OneWay Journey with One Adult" data-provider="getData" finished-at="2020-04-15T12:00:07 IST">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\ankit.1.kansal\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_pre_p_apps' exited with code 20'; Stderr: 'cmd: Can't find service: settings'; Code: '20'
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAP-TZD-0X76360', ip: '192.168.43.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\ankit.1.kansal\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_pre_p_apps' exited with code 20'; Stderr: 'cmd: Can't find service: settings'; Code: '20'
+    at getResponseForW3CError (C:\Users\ankit.1.kansal\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\ankit.1.kansal\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAP-TZD-0X76360', ip: '192.168.43.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: AndroidDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\ankit.1.kansal\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_pre_p_apps' exited with code 20'; Stderr: 'cmd: Can't find service: settings'; Code: '20'
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAP-TZD-0X76360', ip: '192.168.43.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\ankit.1.kansal\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_pre_p_apps' exited with code 20'; Stderr: 'cmd: Can't find service: settings'; Code: '20'
+    at getResponseForW3CError (C:\Users\ankit.1.kansal\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\ankit.1.kansal\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAP-TZD-0X76360', ip: '192.168.43.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:38)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:84)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:94)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:95)
+at com.tigerAir.mobileAutomation.Base.BasePage.applauncher(BasePage.java:135)
+at com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases.appSetup(BookingModuleTestCases.java:72)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.reflect.InvocationTargetException
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
+... 46 more
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\ankit.1.kansal\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_pre_p_apps' exited with code 20'; Stderr: 'cmd: Can't find service: settings'; Code: '20'
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAP-TZD-0X76360', ip: '192.168.43.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\ankit.1.kansal\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_pre_p_apps' exited with code 20'; Stderr: 'cmd: Can't find service: settings'; Code: '20'
+    at getResponseForW3CError (C:\Users\ankit.1.kansal\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\ankit.1.kansal\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+... 51 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC -->
-        <test-method status="PASS" signature="reportTearDown(org.testng.ITestResult)[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="reportTearDown" is-config="true" duration-ms="1003" started-at="2020-03-30T10:03:54 IST" finished-at="2020-03-30T10:03:55 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC status=SUCCESS method=BookingModuleTestCases.OneAdult_OneWay_Currency_AUD_FareType_Light_FOP_VisaCC(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="reportTearDown(org.testng.ITestResult)[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="reportTearDown" is-config="true" duration-ms="-1586932207659" started-at="2020-04-15T12:00:07 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportTearDown -->
-        <test-method status="PASS" signature="stopService()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="stopService" is-config="true" duration-ms="111" started-at="2020-03-30T10:03:55 IST" finished-at="2020-03-30T10:03:55 IST">
+        <test-method status="SKIP" signature="stopService()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="stopService" is-config="true" duration-ms="-1586932207664" started-at="2020-04-15T12:00:07 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopService -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="tearDown" is-config="true" duration-ms="693" started-at="2020-03-30T10:03:55 IST" finished-at="2020-03-30T10:03:56 IST">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.tigerAir.mobileAutomation.testCases.BookingModuleTestCases@7692d9cc]" name="tearDown" is-config="true" duration-ms="-1586932207724" started-at="2020-04-15T12:00:07 IST" finished-at="1970-01-01T05:30:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

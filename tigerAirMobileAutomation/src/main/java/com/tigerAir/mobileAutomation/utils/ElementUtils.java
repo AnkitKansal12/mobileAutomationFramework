@@ -25,17 +25,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
-import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.MediaEntityModelProvider;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.Markup;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.tigerAir.mobileAutomation.Base.BasePage;
 
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
@@ -80,7 +73,7 @@ public class ElementUtils extends BasePage {
 
 	public void waitForElementPresent(By locator) {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 50);
+			WebDriverWait wait = new WebDriverWait(driver, 20);
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		} catch (Exception e) {
 			LoggersUtil.error("Some exception has occured during wait for an element" + e.getMessage());
@@ -89,7 +82,7 @@ public class ElementUtils extends BasePage {
 
 	public void waitForElementVisibility(By locator) {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 5);
+			WebDriverWait wait = new WebDriverWait(driver, 1);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		} catch (Exception e) {
 			LoggersUtil

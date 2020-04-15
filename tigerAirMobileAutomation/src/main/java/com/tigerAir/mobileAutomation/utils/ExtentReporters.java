@@ -14,7 +14,7 @@ public class ExtentReporters {
 	public static ExtentTest test;
 
 	public ExtentReporters() {
-		String dateName = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss").format(new java.util.Date());
+		String dateName = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss_a").format(new java.util.Date());
 		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/src/test/resources/Reports/" + dateName + "AutomationReports.html");
 		report = new ExtentReports();
